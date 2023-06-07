@@ -70,7 +70,7 @@ public class Loja{
 
 //Método toString
     public String toString() {
-        return "Nome: " + nome + "/ Quantidade de Funcionários: " + quantidadeFuncionarios + "/ Salário Base dos Funcionários: " + salarioBaseFuncionario;
+        return "Nome: " + nome + "/ Quantidade de Funcionários: " + quantidadeFuncionarios + "/ Salário Base dos Funcionários: " + salarioBaseFuncionario + "/ Data de Fundação: " + dataFundacao + "/ Endereço da Loja: " + enderecoLoja;
     }
 
 //Método gastosComSalario
