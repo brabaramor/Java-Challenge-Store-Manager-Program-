@@ -1,14 +1,20 @@
-/* Etapa 1 */
+/* Etapa 1: criação da classe */
 public class Loja{
     private String nome;
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
+//etapa 2
+    private Data dataFundacao;
+    private Endereco enderecoLoja;
 
 //Metódos Construtores 
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+        //etapa 2
+        dataFundacao = new Data();
+        enderecoLoja = new Endereco();
     }
 
     public Loja(String nome, int quantidadeFuncionarios){
@@ -30,6 +36,15 @@ public class Loja{
     public double getSalarioBaseFuncionario(){
         return salarioBaseFuncionario;
     }
+        
+    //etapa 2
+    public Data getDataFundacao(){
+        return dataFundacao;
+    }
+    
+    public Endereco getEnderecoLoja(){
+        return enderecoLoja;
+    }
 
 //Set
     public void setNome(String nome){
@@ -42,6 +57,15 @@ public class Loja{
 
     public void setSalarioBaseFuncionario(double salarioBaseFuncionario){
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+    }
+    
+    //etapa 2
+    public void setDataFundacao(Data dataFundacao){
+        this.dataFundacao = dataFundacao;
+    }
+    
+    public void setEnderecoLoja(Endereco enderecoLoja){
+        this.enderecoLoja = enderecoLoja;
     }
 
 //Método toString
@@ -68,5 +92,4 @@ public class Loja{
         }
     }
 }
-/* Fim da etapa 1 */
 
