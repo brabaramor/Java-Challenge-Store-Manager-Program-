@@ -1,5 +1,5 @@
 public class Cosmetico extends Loja{
-    double taxaComercializacao;
+    private double taxaComercializacao;
 
     //Construtor
     public Cosmetico(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double taxaComercializacao){
@@ -9,54 +9,59 @@ public class Cosmetico extends Loja{
 
     }
 
-    //métodos de acesso
-    //get
+    //métodos de acesso: verificar se preciso incluir todos os métodos de acesso de todos os atributos, segundo o chatGPT, não é necessário, mas nao entendi isso muito bem
+
+    //get 
     public String getNome(){
-        return nome;
-    }
+        return super.getNome();
+    } // isso existe?
 
     public int getQuantidadeFuncionarios(){
-        return quantidadeFuncionarios;
+        return super.getQuantidadeFuncionarios();
     }
 
     public double getSalarioBaseFuncionario(){
-        return salarioBaseFuncionario;
+        return super.getSalarioBaseFuncionario();
     }
 
     public Endereco getEndereco(){
-        return endereco;
+        return super.getEndereco();
     }
 
     public Data getDataFundacao(){
-        return dataFundacao;
+        return super.getDataFundacao();
     }
-
-    public double getTaxaComercializacao(){
+    //novo atributo 
+        public double getTaxaComercializacao(){
         return taxaComercializacao;
     }
 
     //set
     public void setNome(String nome){
-        this.nome = nome;
+        super.setNome(nome);
     }
 
     public void setQuantidadeFuncionarios(int quantidadeFuncionarios){
-        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        super.setQuantidadeFuncionarios(quantidadeFuncionarios);
     }
 
     public void setSalarioBaseFuncionario(double salarioBaseFuncionario){
-        this.salarioBaseFuncionario = salarioBaseFuncionario;
+        super.setSalarioBaseFuncionario(salarioBaseFuncionario);
     }
 
     public void setEndereco(Endereco endereco){
-        this.endereco = endereco;
+        super.setEndereco(endereco);
     }
 
     public void setDataFundacao(Data dataFundacao){
-        this.dataFundacao = dataFundacao;
+        super.setDataFundacao(dataFundacao);
     }
-
+    //novo atributo
     public void setTaxaComercializacao(double taxaComercializacao){
         this.taxaComercializacao = taxaComercializacao;
+    }
+// sobrescrever toString
+    public String toString() {
+        return super.toString() + "/ Taxa de Comercialização: " + taxaComercializacao;
     }
 }
