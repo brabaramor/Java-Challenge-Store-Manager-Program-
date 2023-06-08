@@ -6,10 +6,6 @@ public class Principal {
   
         String numero = Teclado.leString("Digite número, de acordo com o menu acima:");
         System.out.println("A opção selecionada foi "+ numero);
-
-        if (numero == "1"){
-            criarLoja()
-        }
     }
     
 }
