@@ -4,20 +4,20 @@ public class Loja{
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
 //etapa 2
+    private Endereco endereco;
     private Data dataFundacao;
-    private Endereco enderecoLoja;
 
 //Metódos Construtores 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario){
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         //etapa 2
-        dataFundacao = new Data();
-        enderecoLoja = new Endereco();
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios){
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = -1;
@@ -42,8 +42,8 @@ public class Loja{
         return dataFundacao;
     }
     
-    public Endereco getEnderecoLoja(){
-        return enderecoLoja;
+    public Endereco getEndereco(){
+        return endereco;
     }
 
 //Set
@@ -64,13 +64,13 @@ public class Loja{
         this.dataFundacao = dataFundacao;
     }
     
-    public void setEnderecoLoja(Endereco enderecoLoja){
-        this.enderecoLoja = enderecoLoja;
+    public void setEndereco(Endereco endereco){
+        this.endereco = endereco;
     }
 
 //Método toString
     public String toString() {
-        return "Nome: " + nome + "/ Quantidade de Funcionários: " + quantidadeFuncionarios + "/ Salário Base dos Funcionários: " + salarioBaseFuncionario + "/ Data de Fundação: " + dataFundacao + "/ Endereço da Loja: " + enderecoLoja;
+        return "Nome: " + nome + "/ Quantidade de Funcionários: " + quantidadeFuncionarios + "/ Salário Base dos Funcionários: " + salarioBaseFuncionario + "/ Data de Fundação: " + dataFundacao + "/ Endereço da Loja: " + endereco;
     }
 
 //Método gastosComSalario
