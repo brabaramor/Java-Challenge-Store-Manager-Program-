@@ -18,14 +18,14 @@ public class Loja{
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
         //etapa 4
-        this.estoqueProdutos = new Produto[10];
+        this.estoqueProdutos = estoqueProdutos;
     }
 
     public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, Produto[] estoqueProdutos){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         salarioBaseFuncionario = -1.0;
-        this.estoqueProdutos = new Produto[10];
+        this.estoqueProdutos = estoqueProdutos;
 
     }
 
@@ -117,5 +117,18 @@ public class Loja{
             }
         }
 
+    }
+
+    public boolean insereProduto(Produto produto) {
+        for (int i = 0; i < estoqueProdutos; i++) {
+            if (estoqueProdutos[i] == null) {
+                estoqueProdutos[i] = produto;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public String removeProdutos(){
     }
 }
