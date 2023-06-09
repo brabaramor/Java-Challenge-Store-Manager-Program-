@@ -1,8 +1,8 @@
-public class Alimentacao {
+public class Alimentacao extends Loja{
     private Data dataAlvara;
 
     //Método construtor
-    public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara){
+    public Alimentacao(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara){
 
         super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
         this.dataAlvara = dataAlvara;
@@ -29,7 +29,7 @@ public class Alimentacao {
         return super.getDataFundacao();
     }
     //novo atributo 
-    public Data dataAlvara(){
+    public Data getDataAlvara(){
         return dataAlvara;
     }
 

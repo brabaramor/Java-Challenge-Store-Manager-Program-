@@ -1,8 +1,8 @@
-public class Bijuteria {
+public class Bijuteria extends Loja{
     private double metaVendas;
 
     //Método construtor
-    public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double metaVendas){
+    public Bijuteria(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double metaVendas){
 
         super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
         this.metaVendas = metaVendas;
@@ -29,7 +29,7 @@ public class Bijuteria {
         return super.getDataFundacao();
     }
     //novo atributo 
-    public double metaVendas(){
+    public double getMetaVendas(){
         return metaVendas;
     }
 

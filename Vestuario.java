@@ -29,7 +29,7 @@ public class Vestuario extends Loja{
         return super.getDataFundacao();
     }
     //novo atributo 
-    public boolean produtosImportados(){
+    public boolean getProdutosImportados(){
         return produtosImportados;
     }
 

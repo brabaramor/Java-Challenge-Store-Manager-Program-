@@ -14,7 +14,7 @@ public class Cosmetico extends Loja{
     //get 
     public String getNome(){
         return super.getNome();
-    } // isso existe?
+    }
 
     public int getQuantidadeFuncionarios(){
         return super.getQuantidadeFuncionarios();

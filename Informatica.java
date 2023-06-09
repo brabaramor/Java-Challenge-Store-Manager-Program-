@@ -1,8 +1,8 @@
-public class Informatica  {
+public class Informatica extends Loja{
     private double seguroEletronicos;
 
     //Método construtor
-    public Vestuario(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos){
+    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos){
 
         super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
         this.seguroEletronicos = seguroEletronicos;
@@ -29,7 +29,7 @@ public class Informatica  {
         return super.getDataFundacao();
     }
     //novo atributo 
-    public double seguroEletronicos(){
+    public double getSeguroEletronicos(){
         return seguroEletronicos;
     }
 
