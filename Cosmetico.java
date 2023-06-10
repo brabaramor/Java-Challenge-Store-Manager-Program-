@@ -9,7 +9,7 @@ public class Cosmetico extends Loja{
 
     }
 
-    //métodos de acesso: verificar se preciso incluir todos os métodos de acesso de todos os atributos, segundo o chatGPT, não é necessário, mas nao entendi isso muito bem
+    //métodos de acesso
 
     //get 
     public String getNome(){

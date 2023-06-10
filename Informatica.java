@@ -8,7 +8,7 @@ public class Informatica extends Loja{
         this.seguroEletronicos = seguroEletronicos;
     }
 //métodos de acesso
-    //get ver se isso existe....
+    //get 
     public String getNome(){
         return super.getNome();
     } 
