@@ -2,9 +2,9 @@ public class Alimentacao extends Loja{
     private Data dataAlvara;
 
     //Método construtor
-    public Alimentacao(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara){
+    public Alimentacao(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara, int quantProdutosEstoque){
 
-        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
+        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, quantProdutosEstoque);
         this.dataAlvara = dataAlvara;
     }
 //métodos de acesso

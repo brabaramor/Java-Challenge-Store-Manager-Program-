@@ -10,7 +10,8 @@ public class Loja{
     private Produto[] estoqueProdutos;
 
 //Metódos Construtores 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Produto[] estoqueProdutos){
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int quantProdutosEstoque){
+       
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
@@ -18,15 +19,47 @@ public class Loja{
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
         //etapa 4
-        this.estoqueProdutos = estoqueProdutos;
+        this.estoqueProdutos = new Produto[quantProdutosEstoque];
     }
 
-    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, Produto[] estoqueProdutos){
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int quantProdutosEstoque){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         salarioBaseFuncionario = -1.0;
-        this.estoqueProdutos = estoqueProdutos;
+        //etapa 4
+        this.estoqueProdutos = new Produto[quantProdutosEstoque];
+        
+        for(int i = 0; i < estoqueProdutos.length; i++){
 
+        estoqueProdutos[i] = null;
+        }
+    }
+
+//Métodos para inserir e remover produto (o método de imprimir tá no final do código)
+    public boolean insereProduto(Produto produto){
+
+        if (estoqueProdutos[estoqueProdutos.length - 1] != null)
+ 
+            for(int i=0; i < estoqueProdutos.length; i++){
+                if(estoqueProdutos[i] == null){
+                    estoqueProdutos[i] = produto;
+                //esse 'if' acima adiciona um produto na primeira posição nula do array
+                    return true;
+                }
+            }
+        return false;
+    }
+
+    public boolean removeProduto(String nomeProduto) {
+        
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i] != null && estoqueProdutos[i].getNome().equalsIgnoreCase(nomeProduto)) {
+                estoqueProdutos[i] = null; // Remove o produto, atribuindo nulo à posição
+                return true; // Indica que o produto foi removido com sucesso
+            }
+        }
+
+        return false; // Indica que o produto não foi encontrado no estoque
     }
 
 //Métodos de acesso
@@ -118,17 +151,23 @@ public class Loja{
         }
 
     }
-
-    public boolean insereProduto(Produto produto) {
-        for (int i = 0; i < estoqueProdutos; i++) {
-            if (estoqueProdutos[i] == null) {
-                estoqueProdutos[i] = produto;
-                return true;
-            }
+    
+    //método alternativo para conseguir achar o 'tipo' da loja na classe Shopping
+    public String getTipo() {
+        if (this instanceof Alimentacao) {
+            return "Alimentação";
+        } else if (this instanceof Bijuteria) {
+            return "Bijuteria";
+        } else if (this instanceof Cosmetico){
+            return "Cosmético";
+        } else if (this instanceof Informatica){
+            return "Informática";
+        } else if (this instanceof Vestuario){
+            return "Vestuário";
         }
-        return false;
-    }
-
-    public String removeProdutos(){
+        // Adicione mais condições para outros tipos de lojas, se necessário
+        return "Tipo Desconhecido";
     }
 }
+
+

@@ -1,5 +1,5 @@
 public class Principal {
-    public static void main (String[] args){
+    public static void main (String[] args, int quantProdutosEstoqueLoja1){
         System.out.println("(1) criar uma loja");
         System.out.println("(2) criar um produto");
         System.out.println("(3) sair");
@@ -33,7 +33,7 @@ public class Principal {
                 Data dataFundacaoLoja1 = new Data(diaFundacaoLoja1, mesFundacaoLoja1, anoFundacaoLoja1);
                 
                 //criação do objeto loja1
-                Loja loja1 = new Loja (nomeDaLoja1, quantidadeFuncionariosLoja1, salarioFuncionariosLoja1, enderecoLoja1, dataFundacaoLoja1);
+                Loja loja1 = new Loja (nomeDaLoja1, quantidadeFuncionariosLoja1, salarioFuncionariosLoja1, enderecoLoja1, dataFundacaoLoja1, quantProdutosEstoqueLoja1);
                 System.out.println("Loja " + loja1.getNome() + " criada");
            
             } else if (numero == 2){

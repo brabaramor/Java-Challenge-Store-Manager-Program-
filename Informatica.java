@@ -2,9 +2,9 @@ public class Informatica extends Loja{
     private double seguroEletronicos;
 
     //Método construtor
-    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos){
+    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos, int quantProdutosEstoque){
 
-        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao);
+        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, quantProdutosEstoque);
         this.seguroEletronicos = seguroEletronicos;
     }
 //métodos de acesso
