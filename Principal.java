@@ -14,6 +14,7 @@ public class Principal {
                 String nomeDaLoja1 = Teclado.leString("Digite o nome da loja: ");
                 int quantidadeFuncionariosLoja1 = Teclado.leInt("Quantidade de funcionários: ");
                 double salarioFuncionariosLoja1 = Teclado.leDouble("Valor do salário base dos funcionários: ");
+               
                 //essas duas variáveis vão ter que ser atribuidas a um novo objeto para poderem ser lidas, porque a classe de entrada de dados não lê "Data" e "Endereco"
                 //endereço (todas essas informações precisarão ser preenchidas uma a uma porque o objeto "enderecoLoja1" precisa ter todos esses parametros para ser da classe Endereco*)
                 String ruaLoja1 = Teclado.leString("Digite o nome da rua do endereço da loja: ");

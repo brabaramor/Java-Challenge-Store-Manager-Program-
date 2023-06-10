@@ -1,3 +1,7 @@
+/* Olá!! :)
+    Meu nome é Bárbara Mór da Mata, sou aluna do curso de Sistemas para Internet, estou matriculada na turma GR96002-00581 de Laboratório I
+*/
+
 /* Etapa 1: criação da classe */
 public class Loja{
     private String nome;
